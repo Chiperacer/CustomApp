@@ -1,0 +1,11 @@
+Install Spicetify:
+iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex
+
+Install Marketplace:
+iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex
+
+Block auto update Spotify (windows):
+del "%localappdata%\Spotify\Update"
+mkdir "%localappdata%\Spotify\Update"
+icacls "%localappdata%\Spotify\Update" /deny "%username%":D
+icacls "%localappdata%\Spotify\Update" /deny "%username%":R
